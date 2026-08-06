@@ -120,12 +120,34 @@ class JupyterlabCodeFormatter {
     language: string | null | undefined
   ): string[] {
     const defaultFormatter = language
-      ? config.preferences?.default_formatter?.[language]
+      ? this._lookupLanguage(config.preferences?.default_formatter, language)
       : undefined;
     if (defaultFormatter instanceof Array) {
       return defaultFormatter;
     }
     return defaultFormatter !== undefined ? [defaultFormatter] : [];
+  }
+
+  /**
+   * Look up a language in a language-keyed mapping, ignoring case.
+   *
+   * Kernels are inconsistent about the casing of the language they report
+   * (`R` vs `r`, `C++11` vs `c++11`), hence the case-insensitive matching.
+   */
+  private _lookupLanguage(
+    mapping: { [language: string]: string | string[] | undefined } | undefined,
+    language: string
+  ): string | string[] | undefined {
+    if (!mapping) {
+      return undefined;
+    }
+    if (Object.prototype.hasOwnProperty.call(mapping, language)) {
+      return mapping[language];
+    }
+    const key = Object.keys(mapping).find(
+      candidate => candidate.toLowerCase() === language.toLowerCase()
+    );
+    return key !== undefined ? mapping[key] : undefined;
   }
 }
 
@@ -268,7 +290,9 @@ export class JupyterlabNotebookCodeFormatter extends JupyterlabCodeFormatter {
     if (kernelName) {
       const specs = sessionContext.specsManager.specs?.kernelspecs;
       if (specs && kernelName in specs) {
-        return specs[kernelName]!.language;
+        // the language is not guaranteed to be present in the spec sent by the
+        // server, despite being required by the type
+        return specs[kernelName]!.language?.toLowerCase() ?? null;
       }
     }
 
