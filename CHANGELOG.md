@@ -2,6 +2,41 @@
 
 <!-- <START NEW CHANGELOG ENTRY> -->
 
+## 3.1.0
+
+([Full Changelog](https://github.com/jupyterlab-contrib/jupyterlab_code_formatter/compare/v3.0.3...cc9822e3358a2f494b5e57783994d4f1e742fc6f))
+
+### Enhancements made
+
+- Provide helpful error message when formatter is missing/unavailable [#409](https://github.com/jupyterlab-contrib/jupyterlab_code_formatter/pull/409) ([@krassowski](https://github.com/krassowski))
+- Support programmatic use of commands [#405](https://github.com/jupyterlab-contrib/jupyterlab_code_formatter/pull/405) ([@krassowski](https://github.com/krassowski), [@Copilot](https://github.com/Copilot), [@jtpio](https://github.com/jtpio))
+
+### Bugs fixed
+
+- Fail gracefully on JupyterLab v3 [#411](https://github.com/jupyterlab-contrib/jupyterlab_code_formatter/pull/411) ([@krassowski](https://github.com/krassowski))
+- Fix uppercase R key recognition [#410](https://github.com/jupyterlab-contrib/jupyterlab_code_formatter/pull/410) ([@krassowski](https://github.com/krassowski))
+- Fix `CommandEscaper` incorrectly applying to languages other than Python [#408](https://github.com/jupyterlab-contrib/jupyterlab_code_formatter/pull/408) ([@krassowski](https://github.com/krassowski))
+- CommandLineFormatter: check process exit code [#367](https://github.com/jupyterlab-contrib/jupyterlab_code_formatter/pull/367) ([@nelhage](https://github.com/nelhage), [@AA-Turner](https://github.com/AA-Turner))
+
+### Maintenance and upkeep improvements
+
+- Fix check release workflow [#412](https://github.com/jupyterlab-contrib/jupyterlab_code_formatter/pull/412) ([@krassowski](https://github.com/krassowski))
+- Harden the github actions for security [#403](https://github.com/jupyterlab-contrib/jupyterlab_code_formatter/pull/403) ([@peytondmurray](https://github.com/peytondmurray), [@krassowski](https://github.com/krassowski))
+- Restore correct snapshot update job [#377](https://github.com/jupyterlab-contrib/jupyterlab_code_formatter/pull/377) ([@krassowski](https://github.com/krassowski), [@AA-Turner](https://github.com/AA-Turner), [@juniorcastro0152-hub](https://github.com/juniorcastro0152-hub))
+- Update repo from the `jupyterlab/extension-template` copier template [#376](https://github.com/jupyterlab-contrib/jupyterlab_code_formatter/pull/376) ([@AA-Turner](https://github.com/AA-Turner), [@krassowski](https://github.com/krassowski))
+- Skip `rpy2` tests if it is not installed [#375](https://github.com/jupyterlab-contrib/jupyterlab_code_formatter/pull/375) ([@AA-Turner](https://github.com/AA-Turner))
+
+### Contributors to this release
+
+The following people contributed discussions, new ideas, code and documentation contributions, and review.
+See [our definition of contributors](https://github-activity.readthedocs.io/en/latest/use/#how-does-this-tool-define-contributions-in-the-reports).
+
+([GitHub contributors page for this release](https://github.com/jupyterlab-contrib/jupyterlab_code_formatter/graphs/contributors?from=2026-02-11&to=2026-08-06&type=c))
+
+@AA-Turner ([activity](https://github.com/search?q=repo%3Ajupyterlab-contrib%2Fjupyterlab_code_formatter+involves%3AAA-Turner+updated%3A2026-02-11..2026-08-06&type=Issues)) | @Copilot ([activity](https://github.com/search?q=repo%3Ajupyterlab-contrib%2Fjupyterlab_code_formatter+involves%3ACopilot+updated%3A2026-02-11..2026-08-06&type=Issues)) | @jtpio ([activity](https://github.com/search?q=repo%3Ajupyterlab-contrib%2Fjupyterlab_code_formatter+involves%3Ajtpio+updated%3A2026-02-11..2026-08-06&type=Issues)) | @juniorcastro0152-hub ([activity](https://github.com/search?q=repo%3Ajupyterlab-contrib%2Fjupyterlab_code_formatter+involves%3Ajuniorcastro0152-hub+updated%3A2026-02-11..2026-08-06&type=Issues)) | @krassowski ([activity](https://github.com/search?q=repo%3Ajupyterlab-contrib%2Fjupyterlab_code_formatter+involves%3Akrassowski+updated%3A2026-02-11..2026-08-06&type=Issues)) | @nelhage ([activity](https://github.com/search?q=repo%3Ajupyterlab-contrib%2Fjupyterlab_code_formatter+involves%3Anelhage+updated%3A2026-02-11..2026-08-06&type=Issues)) | @peytondmurray ([activity](https://github.com/search?q=repo%3Ajupyterlab-contrib%2Fjupyterlab_code_formatter+involves%3Apeytondmurray+updated%3A2026-02-11..2026-08-06&type=Issues))
+
+<!-- <END NEW CHANGELOG ENTRY> -->
+
 ## 3.0.3
 
 ([Full Changelog](https://github.com/jupyterlab-contrib/jupyterlab_code_formatter/compare/v3.0.2...2ba87d6bfcc069a5eacf134aea7184eb5e86db81))
@@ -25,8 +60,6 @@ See [our definition of contributors](https://github-activity.readthedocs.io/en/l
 ([GitHub contributors page for this release](https://github.com/jupyterlab-contrib/jupyterlab_code_formatter/graphs/contributors?from=2024-08-14&to=2026-02-11&type=c))
 
 @AA-Turner ([activity](https://github.com/search?q=repo%3Ajupyterlab-contrib%2Fjupyterlab_code_formatter+involves%3AAA-Turner+updated%3A2024-08-14..2026-02-11&type=Issues)) | @Hnasar ([activity](https://github.com/search?q=repo%3Ajupyterlab-contrib%2Fjupyterlab_code_formatter+involves%3AHnasar+updated%3A2024-08-14..2026-02-11&type=Issues)) | @krassowski ([activity](https://github.com/search?q=repo%3Ajupyterlab-contrib%2Fjupyterlab_code_formatter+involves%3Akrassowski+updated%3A2024-08-14..2026-02-11&type=Issues)) | @lucas-bremond ([activity](https://github.com/search?q=repo%3Ajupyterlab-contrib%2Fjupyterlab_code_formatter+involves%3Alucas-bremond+updated%3A2024-08-14..2026-02-11&type=Issues)) | @martinRenou ([activity](https://github.com/search?q=repo%3Ajupyterlab-contrib%2Fjupyterlab_code_formatter+involves%3AmartinRenou+updated%3A2024-08-14..2026-02-11&type=Issues)) | @nelhage ([activity](https://github.com/search?q=repo%3Ajupyterlab-contrib%2Fjupyterlab_code_formatter+involves%3Anelhage+updated%3A2024-08-14..2026-02-11&type=Issues)) | @shreve ([activity](https://github.com/search?q=repo%3Ajupyterlab-contrib%2Fjupyterlab_code_formatter+involves%3Ashreve+updated%3A2024-08-14..2026-02-11&type=Issues)) | @tsvikas ([activity](https://github.com/search?q=repo%3Ajupyterlab-contrib%2Fjupyterlab_code_formatter+involves%3Atsvikas+updated%3A2024-08-14..2026-02-11&type=Issues))
-
-<!-- <END NEW CHANGELOG ENTRY> -->
 
 ## 3.0.2
 
